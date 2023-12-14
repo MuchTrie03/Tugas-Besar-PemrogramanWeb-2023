@@ -34,9 +34,9 @@
                     <form action="" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="name">@lang('auth.name_label')</label>
+                            <label for="name">Nama</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                                name="name" placeholder="@lang('auth.name_placeholder')" value="{{old('name')}}"
+                                name="name" placeholder="Masukan nama" value="{{old('name')}}"
                                 required>
                             @error('name')
                             <div class="invalid-feedback">
@@ -45,9 +45,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="email">@lang('auth.email_label')</label>
+                            <label for="email">Email</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
-                                name="email" placeholder="@lang('auth.email_placeholder')" value="{{old('email')}}"
+                                name="email" placeholder="Masukan Email" value="{{old('email')}}"
                                 required>
                             @error('email')
                             <div class="invalid-feedback">
@@ -56,9 +56,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password">@lang('auth.password_label')</label>
+                            <label for="password">Password</label>
                             <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                id="password" name="password" placeholder="@lang('auth.password_placeholder')" required>
+                                id="password" name="password" placeholder="Masukan password" required>
                             @error('password')
                             <div class="invalid-feedback">
                                 {{$message}}
@@ -66,21 +66,21 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password2">@lang('auth.confirm_password_label')</label>
+                            <label for="password2">Konfirmasi kata sandi</label>
                             <input type="password" class="form-control @error('password') is-invalid @enderror"
                                 id="password2" name="password_confirmation"
-                                placeholder="@lang('auth.confirm_password_placeholder')" required>
+                                placeholder="Masukan ulang kata sandi" required>
                             @error('password')
                             <div class="invalid-feedback">
                                 {{$message}}
                             </div>
                             @enderror
                         </div>
-                        <button class="btn btn-primary btn-block" type="submit">@lang('auth.reg_title')</button>
+                        <button class="btn btn-primary btn-block" type="submit">Daftar</button>
                     </form>
                     <hr>
                     <div class="text-center">
-                        <a href="{{url('login')}}">@lang('auth.login_link')</a>
+                        <a href="{{url('login')}}">Sudah memiliki akun? Masuk!</a>
                     </div>
                 </div>
             </div>

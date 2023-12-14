@@ -8,7 +8,7 @@
             <div class="col-lg-7">
                 <div class="card bg-light o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-5">
-                        <h3 class="text-center mb-3">Malaundry</h3>
+                        <h3 class="text-center mb-3">Sign in</h3><br>
                         @if (session('error'))
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 {{ session('error') }}
@@ -34,9 +34,9 @@
                         <form action="" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="email">@lang('auth.email_label')</label>
+                                <label for="email">Nama</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    id="email" name="email" placeholder="@lang('auth.email_placeholder')"
+                                    id="email" name="email" placeholder="Masukan Email Anda"
                                     value="{{ old('email') }}">
                                 @error('email')
                                     <div class="invalid-feedback">
@@ -45,9 +45,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="password">@lang('auth.password_label')</label>
+                                <label for="password">Kata Sandi</label>
                                 <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                    id="password" name="password" placeholder="@lang('auth.password_placeholder')">
+                                    id="password" name="password" placeholder="Masukkan kata sandi anda">
                                 @error('password')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -56,13 +56,13 @@
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                                <label class="form-check-label" for="remember">@lang('auth.remember_me')</label>
+                                <label class="form-check-label" for="remember">Ingat saya</label>
                             </div>
-                            <button class="btn btn-primary btn-block" type="submit">@lang('auth.log_title')</button>
+                            <button class="btn btn-primary btn-block" type="submit">Masuk</button>
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a href="{{ url('register') }}">@lang('auth.register_link')</a>
+                            <a href="{{ url('register') }}">Belum memiliki akun? Daftar!</a>
                         </div>
                     </div>
                 </div>
