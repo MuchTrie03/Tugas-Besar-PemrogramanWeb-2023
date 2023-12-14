@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     @yield('css')
-    @routes('admin')
 </head>
 
 <body class="hold-transition sidebar-mini">
