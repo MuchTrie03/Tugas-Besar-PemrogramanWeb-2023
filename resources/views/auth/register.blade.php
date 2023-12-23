@@ -4,6 +4,11 @@
 
 @section('container')
 <div class="container">
+        @if(Session::has('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+        @endif
     <div class="row justify-content-center">
         <div class="col-lg-7">
             <div class="card bg-light o-hidden border-0 shadow-lg my-5">
@@ -66,7 +71,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password2">Konfirmasi kata sandi</label>
+                            <label for="password2">Konfirmasi Password</label>
                             <input type="password" class="form-control @error('password') is-invalid @enderror"
                                 id="password2" name="password_confirmation"
                                 placeholder="Masukan ulang kata sandi" required>
@@ -78,6 +83,7 @@
                         </div>
                         <button class="btn btn-primary btn-block" type="submit">Daftar</button>
                     </form>
+
                     <hr>
                     <div class="text-center">
                         <a href="{{url('login')}}">Sudah memiliki akun? Masuk!</a>

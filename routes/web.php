@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function ()
+{
     return view('index');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
-});
+Route::get('/register',[AuthController::class,'register']);
+Route::get('/login',[AuthController::class,'login']);
+Route::get('/user',[UserController::class,'halaman_user'])->name('home_user');
+Route::get('/chekout',[UserController::class,'halaman_chekout']);
+Route::get('/admin',[AdminController::class,'halaman_admin']);
+Route::get('/adlog',[AdminController::class,'index']);
 
-Route::get('/register', function () {
-    return view('auth.register');
-});
-
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
-
-Route::get('/user', function () {
-    return view('user.user');
-});
+route::post('/register',[AuthController::class,'regis_post'])->name('registerpost');
+route::post('/login',[AuthController::class,'login_post'])->name('loginpost');

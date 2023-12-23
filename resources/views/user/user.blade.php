@@ -70,6 +70,24 @@
             width: 100%;
         }
     </style>
+    <style>
+        .checkout-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .checkout-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -86,7 +104,7 @@
     <main>
         <h2>Menu Utama Pengguna</h2>
         <p>Selamat datang, <strong>nama_pengguna</strong>!</p>
-        <h3>Daftar Pesanan</h3>
+        <h3>Daftar Antrian</h3>
         <table class="order-list">
             <thead>
                 <tr>
@@ -113,6 +131,7 @@
                 <!-- Contoh data, gunakan data sesuai dengan aplikasi yang sebenarnya -->
             </tbody>
         </table>
+        <a href="proses_checkout.php" class="checkout-button">Mulai Mencuci!</a>
     </main>
 
     <footer>

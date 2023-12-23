@@ -34,7 +34,7 @@
                         <form action="" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Nama</label>
+                                <label for="email">Email</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
                                     id="email" name="email" placeholder="Masukan Email Anda"
                                     value="{{ old('email') }}">
