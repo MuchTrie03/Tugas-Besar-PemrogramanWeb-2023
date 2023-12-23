@@ -73,7 +73,7 @@
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di MaLaundry</h1>
+        <h1>Selamat Datang di Londry Malaundry!</h1>
         <nav>
             <ul>
                 <li><a href="halaman_user.php">Beranda</a></li>
