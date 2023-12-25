@@ -81,21 +81,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ url('admin/riwayat') }}"
                                 class="nav-link">
                                 <i class="nav-icon fas fa-history"></i>
                                 <p>Riwayat Transaksi</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ url('admin') }}"
                                 class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Daftar Harga</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ url('admin/members') }}"
                                 class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>Daftar Member</p>
