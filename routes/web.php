@@ -22,18 +22,24 @@ Route::get('/', function ()
     return view('index');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
+//route admin view (sementara)
+Route::get('/admin/members', function ()
+{
+    return view('admin.members');
 });
 
-Route::get('/register', function () {
-    return view('auth.register');
+Route::get('/admin/riwayat', function ()
+{
+    return view('admin.riwayat_transaksi');
 });
 
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
 
-Route::get('/user', function () {
-    return view('user.user');
-});
+Route::get('/register',[AuthController::class,'register']);
+Route::get('/login',[AuthController::class,'login']);
+Route::get('/user',[UserController::class,'halaman_user'])->name('home_user');
+Route::get('/chekout',[UserController::class,'halaman_chekout']);
+Route::get('/admin',[AdminController::class,'halaman_admin']);
+Route::get('/adlog',[AdminController::class,'index']);
+
+route::post('/register',[AuthController::class,'regis_post'])->name('registerpost');
+route::post('/login',[AuthController::class,'login_post'])->name('loginpost');
