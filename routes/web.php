@@ -25,10 +25,21 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+// Route View Admin Sementara (belum ditambah backend)
 Route::get('/admin', function () {
     return view('admin.admin');
 });
 
+Route::get('/daftar_member', function () {
+    return view('admin.members');
+});
+
+Route::get('/riwayat_transaksi', function () {
+    return view('admin.riwayat_transaksi');
+});
+
+
+// Route User sementara (belum ditambah backend)
 Route::get('/user', function () {
     return view('user.user');
 });
