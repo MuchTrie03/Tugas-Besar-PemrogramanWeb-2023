@@ -74,7 +74,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ url('admin/input') }}"
                                 class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p>Input Transaksi</p>
@@ -88,7 +88,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ url('admin/harga') }}"
                                 class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Daftar Harga</p>

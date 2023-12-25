@@ -33,7 +33,22 @@ Route::get('/admin/riwayat', function ()
     return view('admin.riwayat_transaksi');
 });
 
+Route::get('/admin/harga', function ()
+{
+    return view('admin.daftar_harga');
+});
 
+Route::get('/admin/input', function ()
+{
+    return view('admin.input_transaksi');
+});
+//===========================================================
+
+
+
+
+
+// Auth Routes
 Route::get('/register',[AuthController::class,'register']);
 Route::get('/login',[AuthController::class,'login']);
 Route::get('/user',[UserController::class,'halaman_user'])->name('home_user');
