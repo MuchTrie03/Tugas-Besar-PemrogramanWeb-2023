@@ -2,140 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman User - Aplikasi Laundry</title>
-    <style>
-        /* CSS untuk tampilan */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-        header {
-            background-color: #3498db;
-            padding: 20px 0;
-            text-align: center;
-            color: white;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #f1c40f;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        h2 {
-            color: #3498db;
-        }
-        .order-list {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-        .order-list th, .order-list td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .order-list th {
-            background-color: #3498db;
-            color: white;
-        }
-        .order-list tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        footer {
-            background-color: #3498db;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <style>
-        .checkout-button {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-top: 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .checkout-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <title>Malaundry - Halaman Utama</title>
+    <!-- Tautan CSS untuk gaya halaman -->
+    <link rel="stylesheet" href="{{ asset('css/user.css') }}">
+
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Londry Malaundry!</h1>
+        <!-- Header dengan navigasi -->
         <nav>
             <ul>
-                <li><a href="halaman_user.php">Beranda</a></li>
-                <li><a href="pesanan.php">Pesanan Saya</a></li>
-                <li><a href="logout.php">Keluar</a></li>
+                <li style="float:left;"><a href="pricing.php">Beranda</a></li>
+                <li><a href="about.php">Tentang Kami</a></li>
+                <li><a href="contact.php">Kontak</a></li>
+                <li><a href="contact.php">Pesanan</a></li>
+                <li style="float:right;"><a href="#">Keluar</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <h2>Menu Utama Pengguna</h2>
-        <p>Selamat datang, <strong>nama_pengguna</strong>!</p>
-        <h3>Daftar Antrian</h3>
-        <table class="order-list">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Tanggal Pesanan</th>
-                    <th>Total</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Isi dengan data pesanan dari PHP atau database -->
-                <tr>
-                    <td>1</td>
-                    <td>2023-12-25</td>
-                    <td>Rp 150,000</td>
-                    <td>Selesai</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2023-12-26</td>
-                    <td>Rp 200,000</td>
-                    <td>Menunggu</td>
-                </tr>
-                <!-- Contoh data, gunakan data sesuai dengan aplikasi yang sebenarnya -->
-            </tbody>
-        </table>
-        <a href="proses_checkout.php" class="checkout-button">Mulai Mencuci!</a>
+        <!-- Banner -->
+        <section class="banner" style="position: relative; background-image: url('img/user/user_header.jpg'); background-size: cover; background-position: center;">
+    <div class="overlay"></div>
+    <div class="banner-content">
+        <h1>Selamat Datang di Malaundry</h1>
+        <p>Kami Menawarkan Layanan Laundry Terbaik</p>
+        <!-- Tombol Pemesanan Cepat -->
+        <a href="{{ route('chekout/user') }}" class="btn-order">Pesan Sekarang</a>
+    </div>
+</section>
+
+        <section class="prices">
+    <h2>Harga Kami</h2>
+    <div class="price-container">
+        <div class="price-item">
+            <div class="price-info">
+                <img src="img/user/Kiloan.jpeg" alt="Harga 1">
+                <h3>Rp.7000</h3>
+                <p>Londri Kiloan</p>
+            </div>
+        </div>
+        <div class="price-item">
+            <div class="price-info">
+                <img src="img/user/setrika.jpg" alt="Harga 2">
+                <h3>Rp.4000</h3>
+                <p>Setrika Rapih</p>
+            </div>
+        </div>
+        <div class="price-item">
+            <div class="price-info">
+                <img src="img/user/dry.jpg" alt="Harga 3">
+                <h3>Rp.3000</h3>
+                <p>Mengeringkan Saja</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
     </main>
 
     <footer>
-        <p>Hak Cipta © 2023 Malaundry</p>
+        <!-- Footer dengan informasi kontak atau tautan lainnya -->
+        <p>&copy; 2023 Malaundry. All rights reserved.</p>
     </footer>
 </body>
 </html>
