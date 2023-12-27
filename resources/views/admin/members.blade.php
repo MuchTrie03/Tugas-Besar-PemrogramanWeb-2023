@@ -141,19 +141,19 @@
                                             <th>Jenis Kelamin</th>
                                             <th>Alamat</th>
                                             <th>No Telp</th>
-                                            <th>Poin</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($members as $index => $member)
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>{{ $index + 1 }}</td>
+                                                <td>{{ $member->id_member }}</td>
+                                                <td>{{ $member->nama_member }}</td>
+                                                <td>{{ $member->jenis_kelamin }}</td>
+                                                <td>{{ $member->alamat }}</td>
+                                                <td>{{ $member->no_telp }}</td>
                                             </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -162,6 +162,13 @@
                 </div>
             </div><!-- /.container-fluid -->
         </div>
+    
+        <!-- Inisialisasi DataTables -->
+        <script>
+            $(document).ready(function() {
+                $('#tbl-members').DataTable();
+            });
+        </script>
     </div>    
     <!-- /Konten utama -->
 

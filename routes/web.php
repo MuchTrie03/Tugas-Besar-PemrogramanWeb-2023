@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\MembersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,12 @@ Route::get('/', function ()
 });
 
 //route admin view (sementara)
-Route::get('/admin/members', function ()
-{
-    return view('admin.members');
-});
+//Route::get('/admin/members', function ()
+//{
+//  return view('admin.members');
+//});
+
+Route::get('/admin/members', [MembersController::class, 'index']);
 
 Route::get('/admin/riwayat', function ()
 {
