@@ -1,0 +1,129 @@
+/* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db; /* Warna biru */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.banner {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f2f2f2;
+}
+
+.btn-order {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #3498db; /* Warna biru */
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #2980b9; /* Warna biru yang lebih gelap saat dihover */
+}
+
+.services {
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3498db; /* Warna biru */
+    color: #fff;
+}
+
+.banner {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Hitam dengan opacity 30% */
+    z-index: 1; /* Memastikan lapisan berada di atas gambar latar belakang */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2; /* Memastikan konten berada di atas lapisan hitam */
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.banner-content h1,
+.banner-content p,
+.banner-content .btn-order {
+    color: #fff; /* Mengatur warna teks */
+}
+
+.prices {
+    margin-top: 30px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between; /* Menyusun item ke pinggir */
+    align-items: center; /* Memusatkan vertikal */
+}
+
+.price-item {
+    width: 30%; /* Atur lebar tiap item */
+    border: 1px solid #ccc; /* Untuk kejelasan visual, bisa dihapus jika tidak diperlukan */
+    padding: 20px; /* Spasi dalam item */
+}
+
+.price-info {
+    text-align: center; /* Posisi teks ke tengah */
+}
+
+.price-info img {
+    width: 100%; /* Ukuran gambar */
+    margin-bottom: 10px; /* Spasi antara gambar dan teks */
+}
+
+.price-info h3 {
+    font-size: 1.5em; /* Ukuran teks harga */
+    margin-bottom: 10px; /* Spasi antara judul dan deskripsi */
+}
+
+.price-info p {
+    font-size: 1em; /* Ukuran teks deskripsi */
+    color: #666; /* Warna teks deskripsi */
+}
+
+
+
+
