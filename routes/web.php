@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PesananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,9 +54,14 @@ Route::get('/admin/input', function ()
 Route::get('/register',[AuthController::class,'register']);
 Route::get('/login',[AuthController::class,'login']);
 Route::get('/user',[UserController::class,'halaman_user'])->name('home_user');
-Route::get('/chekout',[UserController::class,'halaman_chekout']);
+Route::get('/chekout',[UserController::class,'halaman_chekout'])->name('chekout/user');
 Route::get('/admin',[AdminController::class,'halaman_admin']);
 Route::get('/adlog',[AdminController::class,'index']);
 
 route::post('/register',[AuthController::class,'regis_post'])->name('registerpost');
 route::post('/login',[AuthController::class,'login_post'])->name('loginpost');
+
+Route::post('/pesan', [PesananController::class, 'store'])->name('pesanan.store');
+
+
+
