@@ -185,6 +185,7 @@
             <p class="m-0 text-center text-white">Copyright &copy; Malaundry 2023</p>
         </div>
         <!-- /.container -->
+        / skdasd  sakdasd sdasd kasd
     </footer>
 
 </body>
